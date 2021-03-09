@@ -21,7 +21,7 @@ class VigenereCipheringMachine {
 
     result= str.map((letter, index) => {
         if(str[index].match(/[A-Z]/)){
-        let res = String.fromCharCode(Number(((str[index]?.charCodeAt(0) - 65 + keyArray[keyIndex]?.charCodeAt(0)-65) % 26) + 65));
+        let res = String.fromCharCode(Number(((str[index].charCodeAt(0) - 65 + keyArray[keyIndex].charCodeAt(0)-65) % 26) + 65));
         keyIndex++;
         return res;
       }
